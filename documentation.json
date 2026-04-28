@@ -1,5 +1,5 @@
 {
-  "name": "Starter Kit",
+  "name": "FSH Docs",
   "colors": {
     "light": {
       "brand": "#F97316"
@@ -46,5 +46,10 @@
         ]
       }
     ]
-  }
+  },
+  "title": "FSH Docs",
+  "template": "classic",
+  "logo-dark": "https://blob-cdn.documentation.ai/org-126413f3-60b3-418a-a6a3-c91731a9859b/doc-5ddb8241-3292-4172-aaf3-e39fd0e3f428/1777417545189-t9pl4q20i6p-FSH-ORIGINAL.png?fm=auto&auto=compress%2Cformat",
+  "logo-light": "https://blob-cdn.documentation.ai/org-126413f3-60b3-418a-a6a3-c91731a9859b/doc-5ddb8241-3292-4172-aaf3-e39fd0e3f428/1777417545189-t9pl4q20i6p-FSH-ORIGINAL.png?fm=auto&auto=compress%2Cformat",
+  "favicon": "https://blob-cdn.documentation.ai/org-126413f3-60b3-418a-a6a3-c91731a9859b/doc-5ddb8241-3292-4172-aaf3-e39fd0e3f428/1777417581063-lhdwwovflhb-favicon.svg?fm=auto&auto=compress%2Cformat"
 }
