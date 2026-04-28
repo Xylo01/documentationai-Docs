@@ -22,11 +22,6 @@
                 "title": "Introduction",
                 "path": "introduction",
                 "icon": "home"
-              },
-              {
-                "title": "Components",
-                "path": "components",
-                "icon": "code"
               }
             ]
           },
@@ -40,6 +35,67 @@
               {
                 "title": "VPS Hosting",
                 "path": "vps-hosting"
+              }
+            ]
+          },
+          {
+            "group": "Panel Knowledge Base",
+            "pages": [
+              {
+                "group": "Game Server Panel",
+                "pages": [
+                  {
+                    "title": "Adding Dev/ Sub Users",
+                    "path": "adding-dev/-sub-users"
+                  },
+                  {
+                    "title": "Uploading Files Via SFTP",
+                    "path": "uploading-files-via-sftp"
+                  }
+                ]
+              },
+              {
+                "group": "Client Area ",
+                "pages": [
+                  {
+                    "title": "How to upgrade/downgrade your service",
+                    "path": "how-to-upgrade/downgrade-your-service"
+                  },
+                  {
+                    "title": "How to Cancel A Service",
+                    "path": "how-to-cancel-a-service"
+                  },
+                  {
+                    "title": "Affiliate Program",
+                    "path": "affiliate-program"
+                  },
+                  {
+                    "title": "Discord Linking",
+                    "path": "discord-linking"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Service Knowledge Base",
+            "pages": [
+              {
+                "group": "Virtual Private Servers",
+                "pages": [
+                  {
+                    "title": "Developers and your VPS",
+                    "path": "developers-and-your-vps"
+                  },
+                  {
+                    "title": "Logging into your VPS (Windows)",
+                    "path": "logging-into-your-vps-windows"
+                  },
+                  {
+                    "title": "Creating Your VPS",
+                    "path": "creating-your-vps"
+                  }
+                ]
               }
             ]
           }
