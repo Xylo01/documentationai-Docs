@@ -1,0 +1,110 @@
+GameUserSettings.ini file holds most server as well as most basic and intermediate gameplay settings. Most of these settings can only be specified in the GameUserSettings.ini file
+
+```typescript
+[ServerSettings] section
+
+AdminLogging  -  default: false  -  If True, logs all admin commands to in-game chat.
+AllowAnyoneBabyImprintCuddle  -  default: false  -  If True, allows anyone to "take care" of a baby creatures (cuddle etc.), not just whomever imprinted on it.
+AllowCaveBuildingPvE  -  default: false  -  If True, allows building in caves when PvE mode is also enabled.
+AllowCaveBuildingPvP  -  default: true  -  If True, allows building in caves when PvP mode is also enabled.
+AllowCryoFridgeOnSaddle  -  default: false  -  If True, allows cryofridges to be built on platform saddles and rafts.
+AllowFlyerCarryPvE  -  default: false  -  If True, allows flying creatures to pick up wild creatures in PvE.
+AllowHideDamageSourceFromLogs  -  default: true  -  If False, shows the damage sources in tribe logs.
+AllowHitMarkers  -  default: true  -  If False, disables optional markers for ranged attacks.
+AllowMultipleAttachedC4  -  default: false  -  If True, allows to attach more than one C4 per creature.
+AllowRaidDinoFeeding  -  default: false  -  If True, allows Titanosaurs to be permanently tamed (namely allow them to be fed). Note: The Island only spawns a maximum of 3 Titanosaurs, so 3 tamed should ultimately block any more from spawning.
+AllowThirdPersonPlayer  -  default: true  -  If False, disables third person camera allowed by default on all dedicated servers.
+AlwaysAllowStructurePickup  -  default: false  -  If True disables the timer on the quick pick-up system.
+AutoSavePeriodMinutes  -  default: 15  -  Set interval for automatic saves. Setting this to 0 will cause constant saving.
+BanListURL  -  Sets the global ban list. Must be enclosed in quotes. The list is fetched every 10 minutes (to check if there are new banned IDs).
+ClampItemSpoilingTimes  -  default: false  -  If True, clamps all spoiling times to the items' maximum spoiling times. Useful if any infinite-spoiling exploits were used on the server and you wish to clean them up. Could potentially cause issues with mods that alter spoiling time, hence it is an option.
+ClampResourceHarvestDamage  -  default: false  -  If True, limit the damage caused by a tame to a resource on harvesting based on resource remaining health. Note: enabling this setting may result in sensible resource harvesting reduction using high damage tools or creatures.
+CustomLiveTuningUrl  -  Direct link to the live tuning file. For more information on how to use this system check out the official announcement: https://survivetheark.com/index.php?/forums/topic/569366-server-configuration-live-tuning-system   ARK: Survival Ascended: official servers use https://cdn2.arkdedicated.com/asa/livetuningoverloads.json
+DayCycleSpeedScale  -  default: 1  -  Specifies the scaling factor for the passage of time in the ARK, controlling how often day changes to night and night changes to day. Values lower than 1 slow down the cycle; higher values accelerate it. Base time when value is 1 appears to be 1-minute real time equals approx. 28-minutes game time.
+DayTimeSpeedScale  -  default: 1  -  Specifies the scaling factor for the passage of time in the ARK during the day. This value determines the length of each day, relative to the length of each night (as specified by NightTimeSpeedScale). Lowering this value increases the length of each day.
+DifficultyOffset  -  default: 1  -  Specifies the difficulty level.
+DinoCharacterFoodDrainMultiplier  -  default: 1  -  Specifies the scaling factor for creatures' food consumption. Higher values increase food consumption (creatures get hungry faster). It also affects the taming-times.
+DinoCharacterHealthRecoveryMultiplier  -  default: 1  -  Specifies the scaling factor for creatures' health recovery. Higher values increase the recovery rate (creatures heal faster).
+DinoCharacterStaminaDrainMultiplier  -  default: 1  -  Specifies the scaling factor for creatures' stamina consumption. Higher values increase stamina consumption (creatures get tired faster).
+DinoCountMultiplier  -  default: 1  -  Specifies the scaling factor for creature spawns. Higher values increase the number of creatures spawned throughout the ARK. Note: in ASA this line will automatically be removed from your GameUserSettings.ini if set to 1.
+DinoDamageMultiplier  -  default: 1  -  Specifies the scaling factor for the damage wild creatures deal with their attacks. The default value 1 provides normal damage. Higher values increase damage. Lower values decrease it.
+DinoResistanceMultiplier  -  default: 1  -  Specifies the scaling factor for the resistance to damage wild creatures receive when attacked. The default value 1 provides normal damage. Higher values decrease resistance, increasing damage per attack. Lower values increase it, reducing damage per attack. A value of 0.5 results in a creature taking half damage while a value of 2.0 would result in a creature taking double normal damage.
+DestroyTamesOverTheSoftTameLimit  -  default: false  -  Dinos above the Soft Tame Server Limit will be marked “For Cryo” and display an icon and a timer indicating how soon they need to be cryopodded before they are automatically destroyed. Dinos marked and dinos destroyed by this system will be logged in the tribe log. This differs from the standard tame limit, as it still allows new players to join servers and tame creatures above the 5000 limit, whereas previously, they would not have been able to tame or breed creatures at the server cap. You can define the soft tame limit with MaxTamedDinos_SoftTameLimit. You can define the time (in seconds) before tame's autodestruction with MaxTamedDinos_SoftTameLimit_CountdownForDeletionDuration.
+DisableCryopodEnemyCheck  -  default: false  -  If True, allows cryopods to be used while enemies are nearby.
+DisableCryopodFridgeRequirement  -  default: false  -  If True, allows cryopods to be used without needing to be in range of a powered cryofridge.
+DisableDinoDecayPvE  -  default: false  -  If True, disables the creature decay in PvE mode.
+DisableImprintDinoBuff  -  default: false  -  If True, disables the creature imprinting player Stat Bonus.
+DisablePvEGamma  -  default: false  -  If True, prevents use of console command "gamma" in PvE mode.
+DisableStructureDecayPvE  -  default: false  -  If True, disables the gradual auto-decay of player structures.
+DisableWeatherFog  -  default: false  -  If True, disables fog.
+DontAlwaysNotifyPlayerJoined  -  default: false  -  If True, globally disables player joins notifications.
+EnableExtraStructurePreventionVolumes  -  default: false  -  If True, disables building in specific resource-rich areas, in particular setup on The Island around the major mountains.
+EnablePvPGamma  -  default: false  -  If True, allows use of console command "gamma" in PvP mode.
+globalVoiceChat  -  default: false  -  If True, voice chat turns global.
+HarvestAmountMultiplier  -  default: 1  -  Specifies the scaling factor for yields from all harvesting activities (chopping down trees, picking berries, carving carcasses, mining rocks, etc.). Higher values increase the amount of materials harvested with each strike.
+HarvestHealthMultiplier  -  default: 1  -  Specifies the scaling factor for the "health" of items that can be harvested (trees, rocks, carcasses, etc.). Higher values increase the amount of damage (i.e., "number of strikes") such objects can withstand before being destroyed, which results in higher overall harvest yields.
+ImplantSuicideCD  -  default: 28800  -  Defines the time (in seconds) a player must wait between 2 uses of the implant's "Respawn" feature.
+ItemStackSizeMultiplier  -  default: 1  -  Allow increasing or decreasing global item stack size, this means all default stack sizes will be multiplied by the value given (excluding items that have a stack size of 1 by default).
+KickIdlePlayersPeriod  -  default: 3600  -  Time in seconds after which characters that have not moved or interacted will be kicked (if -EnableIdlePlayerKick as command line parameter is set).
+MaxPersonalTamedDinos  -  default: 0  -  Sets a per-tribe creature tame limit (500 on official PvE servers, 300 in official PvP servers). The default value of 0 disables such limit. Note: cryoed tames do not count toward this limit.
+MaxTamedDinos  -  default: 5000  -  Sets the maximum number of tame creatures on a server, this is a global cap. Note: cryoed tames do not count toward this limit.
+MaxTamedDinos_SoftTameLimit  -  default: 5000  -  Defines the server-wide soft tame limit. See DestroyTamesOverTheSoftTameLimit for more info.
+MaxTamedDinos_SoftTameLimit_CountdownForDeletionDuration  -  default: 604800  -  Defines the time (in seconds) for tame to get destroyed. See DestroyTamesOverTheSoftTameLimit for more info.
+MaxTrainCars  -  default: 8  -  Defines the maximum amount of carts a train cave have.
+MaxTributeDinos  -  default: 20  -  Slots for uploaded creatures. Any value less than default will be reverted. Note: Some players claimed maximum 273 to be safe cap and more will corrupt profile/cluster and lead to lose of all stored creatures.
+MaxTributeItems  -  default: 50  -  Slots for uploaded items and resources. Any value less than default will be reverted. Note: Some player claimed maximum 154 to be safe cap and more will corrupt profile/cluster and lead to lose of all stored items and resources.
+NightTimeSpeedScale  -  default: 1  -  Specifies the scaling factor for the passage of time in the ARK during night time. This value determines the length of each night, relative to the length of each day (as specified by DayTimeSpeedScale) Lowering this value increases the length of each night.
+NonPermanentDiseases  -  default: false  -  If True, makes permanent diseases not permanent. Players will lose them on re-spawn.
+OverrideOfficialDifficulty  -  default: 0  -  Allows you to override the default server difficulty level of 4 with 5 to match the new official server difficulty level. Default value of 0.0 disables the override. A value of 5.0 will allow common creatures to spawn up to level 150.
+OverrideStructurePlatformPrevention  -  default: false  -  If True, turrets becomes be buildable and functional on platform saddles.
+OxygenSwimSpeedStatMultiplier  -  default: 1  -  Use this to set how swim speed is multiplied by level spent in oxygen.
+PerPlatformMaxStructuresMultiplier  -  default: 1  -  Higher value increases (from a percentage scale) max number of items place-able on saddles and rafts.
+PlatformSaddleBuildAreaBoundsMultiplier  -  default: 1  -  Increasing the number allows structures being placed further away from the platform.
+PlayerCharacterFoodDrainMultiplier  -  default: 1  -  Specifies the scaling factor for player characters' food consumption. Higher values increase food consumption (player characters get hungry faster).
+PlayerCharacterHealthRecoveryMultiplier  -  default: 1  -  Specifies the scaling factor for player characters' health recovery. Higher values increase the recovery rate (player characters heal faster).
+PlayerCharacterStaminaDrainMultiplier  -  default: 1  -  Specifies the scaling factor for player characters' stamina consumption. Higher values increase stamina consumption (player characters get tired faster).
+PlayerCharacterWaterDrainMultiplier  -  default: 1  -  Specifies the scaling factor for player characters' water consumption. Higher values increase water consumption (player characters get thirsty faster).
+PlayerDamageMultiplier  -  default: 1  -  Specifies the scaling factor for the damage players deal with their attacks. The default value 1 provides normal damage. Higher values increase damage. Lower values decrease it.
+PlayerResistanceMultiplier  -  default: 1  -  Specifies the scaling factor for the resistance to damage players receive when attacked. The default value 1 provides normal damage. Higher values decrease resistance, increasing damage per attack. Lower values increase it, reducing damage per attack. A value of 0.5 results in a player taking half damage while a value of 2.0 would result in taking double normal damage.
+PreventDiseases  -  default: false  -  If True, completely prevents diseases on the server.
+PreventMateBoost  -  default: false  -  If True, disables creature mate boosting.
+PreventOfflinePvP  -  default: false  -  If True, enables the Offline Raiding Prevention (ORP). When all tribe members are logged off, tribe characters, creature and structures become invulnerable. Creature starvation still applies, moreover, characters and creature can still die if drowned. Despite the name, it works on both PvE and PvP game modes. Due to performance reason, it is recommended to set a minimum interval with PreventOfflinePvPInterval option before ORP becomes active. ORP also helps lowering memory and CPU usage on a server.
+PreventOfflinePvPInterval  -  default: 0  -  Seconds to wait before a ORP becomes active for tribe/players and relative creatures/structures (10 seconds in official PvE servers).
+PreventSpawnAnimations  -  default: false  -  If True, player characters (re)spawn without the wake-up animation.
+PreventTribeAlliances  -  default: false  -  If True, prevents tribes from creating Alliances.
+ProximityChat  -  default: false  -  If True, only players near each other can see their chat messages.
+PvEAllowStructuresAtSupplyDrops  -  default: false  -  If True, allows building near supply drop points in PvE mode.
+PvEDinoDecayPeriodMultiplier  -  default: 1  -  Creature PvE auto-decay time multiplier. Requires DisableDinoDecayPvE=false in GameUserSettings.ini or ?DisableDinoDecayPvE=false in command line to work.
+PvPDinoDecay  -  default: false  -  If True, enables creatures' decay in PvP while the Offline Raid Prevention is active.
+RaidDinoCharacterFoodDrainMultiplier  -  default: 1  -  Affects how quickly the food drains on such "raid dinos" (e.g.: Titanosaurus)
+RandomSupplyCratePoints  -  default: false  -  If True, supply drops are in random locations.
+ResourcesRespawnPeriodMultiplier  -  default: 1  -  Specifies the scaling factor for the re-spawn rate for resource nodes (trees, rocks, bushes, etc.). Lower values cause nodes to re-spawn more frequently.
+ServerAdminPassword  -  enter your admin password after "="  -  If specified, players must provide this password (via the in-game console) to gain access to administrator commands on the server.
+ServerPassword  -  enter your server password after "="  -  If specified, players must provide this password to join the server.
+serverPVE  -  default: false  -  If True, disables PvP and enables PvE
+ShowFloatingDamageText  -  default: false  -  If True, enables RPG-style popup damage text mode.
+ShowMapPlayerLocation  -  default: true  -  If False, hides the player's own precise position when they view their map.
+StructureDamageMultiplier  -  default: 1  -  Specifies the scaling factor for the damage structures deal with their attacks (i.e., spiked walls). Higher values increase damage. Lower values decrease it.
+StructurePickupHoldDuration  -  default: 0.5  -  Specifies the quick pick-up hold duration, a value of 0 results in instant pick-up.	
+StructurePickupTimeAfterPlacement  -  default: 30  -  Amount of time in seconds after placement that quick pick-up is available.
+StructurePreventResourceRadiusMultiplier  -  default: 1  -  Same as ResourceNoReplenishRadiusStructures in Game.ini. If both settings are set both multiplier will be applied.
+StructureResistanceMultiplier  -  default: 1  -  Specifies the scaling factor for the resistance to damage structures receive when attacked. The default value 1 provides normal damage. Higher values decrease resistance, increasing damage per attack. Lower values increase it, reducing damage per attack. A value of 0.5 results in a structure taking half damage while a value of 2.0 would result in a structure taking double normal damage.
+TamedDinoDamageMultiplier  -  default: 1  -  Specifies the scaling factor for the damage tame creatures deal with their attacks. The default value 1 provides normal damage. Higher values increase damage. Lower values decrease it.
+TamedDinoResistanceMultiplier  -  default: 1  -  Specifies the scaling factor for the resistance to damage tame creatures receive when attacked. The default value 1 provides normal damage. Higher values decrease resistance, increasing damage per attack. Lower values increase it, reducing damage per attack. A value of 0.5 results in a creature taking half damage while a value of 2.0 would result in a creature taking double normal damage.
+TamingSpeedMultiplier  -  default: 1  -  Specifies the scaling factor for creature taming speed. Higher values make taming faster.
+TheMaxStructuresInRange  -  default: 10500  -  Specifies the maximum number of structures that can be constructed within a certain (currently hard-coded) range.
+TribeNameChangeCooldown  -  default: 15  -  Cool-down, in minutes, in between tribe name changes.
+XPMultiplier  -  default: 1  -  Specifies the scaling factor for the experience received by players, tribes and tames for various actions. The default value 1 provides the same amounts of experience as in the single player experience (and official public servers). Higher values increase XP amounts awarded for various actions; lower values decrease it.
+
+[Session Settings] section
+
+Port  -  default: 7777  -  Specifies the Game Port used for players to connect to the server.
+SessionName  -  default: Ark #123456  -  Specifies the Server name advertised in the Game Server Browser as well in Steam Server browser. If no name is provided, the default name will be ARK # followed by a random 6 digit number. Note: Name must not be typed between quotes unless it is launched from command line.
+
+[MessageOfTheDay] section
+
+Duration  -  default: 20  -  Specifies in seconds the duration of the displayed message on player log-in.
+Message  -  this setting has no default  -  A single line string for a message displayed to players once logged-in. No quotes needed. Use \n to start a new line in the message.
+
+```
+

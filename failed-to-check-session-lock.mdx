@@ -1,0 +1,46 @@
+---
+title: Failed to check session lock
+---
+## How to Fix the 'Failed to Check Session Lock' Error in Minecraft
+
+The "Failed to check session lock" error can randomly occur when a Minecraft server is unable to access the `session.lock` file. This issue often leads to server crashes or prevents the server from starting. Fortunately, fixing this error is quick and easy!
+
+---
+
+## **Understanding the Error**
+
+Error message:
+
+```typescript
+net.minecraft.server.WorldConflictException: Failed to check session lock, aborting.
+```
+
+This issue typically arises when the server is unable to verify or access the `session.lock` file in your world folder. This can happen due to corruption, improper shutdowns, or file access conflicts.
+
+---
+
+## **Steps to Fix the Error**
+
+Follow these steps to resolve the issue:
+
+1. **Stop the Server** Log into your game control panel and stop the Minecraft server to prevent further issues.
+
+2. **Access the File Manager** Navigate to the server’s file manager through the control panel.
+
+3. **Locate the World Folder** Open the folder containing your Minecraft world files (e.g., `world`, `world_nether`, or `world_the_end`).
+
+4. **Delete the&#x20;**`session.lock`**&#x20;File** Find and delete the `session.lock` file in each world folder.
+
+5. **Restart the Server** Start your server again. Minecraft will automatically regenerate a new `session.lock` file.
+
+---
+
+## **Preventing Future Session Lock Issues**
+
+- **Proper Server Shutdowns:** Always shut down the server using the control panel or server commands instead of force-closing it.
+
+- **Backup Regularly:** Regular backups help safeguard your world files against corruption.
+
+- **Monitor Disk Space:** Ensure the server has enough disk space to prevent file write issues.
+
+By following this guide, you can quickly resolve the "Failed to check session lock" error and keep your Minecraft server running smoothly!

@@ -1,0 +1,45 @@
+# Minecraft Server RAM Guide
+
+Minecraft servers require varying amounts of RAM depending on their purpose and configuration. RAM is the server's memory, determining the number of tasks it can handle simultaneously.
+
+If a Minecraft server doesn't have enough RAM, it may experience performance issues, so it's essential to understand what influences RAM usage and how much is needed.
+
+Generally, the more addons (mods/plugins) and players a server supports, the more RAM it will require.
+
+---
+
+## Vanilla / Spigot / Paper
+
+Vanilla servers generally require less RAM than other server types, but several factors can influence the exact amount needed.
+
+| Configuration                 | RAM                                                |
+| ----------------------------- | -------------------------------------------------- |
+| Minecraft 1.16.5 and previous | 2 GB                                               |
+| Minecraft 1.17+               | 3 GB                                               |
+| Every additional 5 players    | +1 GB                                              |
+| Every 10 plugins              | +1 GB (depends on how RAM-intensive the plugin is) |
+
+---
+
+## Forge / Fabric
+
+Running a modded Minecraft server can greatly increase your RAM usage, often much more than a vanilla server. The required RAM varies based on several factors:
+
+- **Number of Mods:** More mods generally mean more RAM is needed. Each mod requires memory to load assets, handle processes, and interact with other mods.
+
+- **Minecraft Version:** Newer versions of Minecraft tend to use more resources due to added features and optimizations.
+
+- **Number of Players:** With more players online, the server has to manage more actions and entities, which increases RAM demand.
+
+- **Server Progress:** As players explore, build, and interact with the world, more chunks load, and entities spawn, both of which consume more memory over time.
+
+Allocating enough RAM to handle your modpack's needs is essential for maintaining a smooth and enjoyable experience on your server.
+
+| Modpack Version                        | RAM  |
+| -------------------------------------- | ---- |
+| Minecraft 1.12.2 and previous modpacks | 4 GB |
+| Minecraft 1.13–1.16.5 modpacks         | 5 GB |
+| Minecraft 1.17+ modpacks               | 6 GB |
+
+> **Note:** It's essential to check the recommended RAM usage on the official webpage of many modpacks, as they often provide guidance on optimal performance.
+

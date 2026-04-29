@@ -1,0 +1,49 @@
+---
+title: How to Change Your BeamMP Server Map
+---
+Whether you're looking to explore new terrains or just want a different environment for your players, this guide will walk you through the steps to change the server map on your BeamMP server using the FSH Game Panel. By following these instructions, you'll be able to quickly switch to any of the stock maps that come with BeamMP or even set a custom map of your choice.
+
+### Using Default Maps
+
+Here is how you can use some of the default maps that come with BeamMP:
+
+1. Log in to the **FSH Game Panel** and select your BeamMP server.
+
+2. In the sidebar, go to Server Options.
+
+3. Find the Map setting and select the map you would like from the dropdown.
+
+4. Restart your server.
+
+### Uploading Custom Maps
+
+Custom maps are normally provided to you in a .zip format. To use custom maps on your BeamMP server, you'll need to upload them via SFTP. For this example, we will be uploading a file called custom\_map.zip to our server.
+
+1. Log in to the **FSH Game Panel** and select your BeamMP server.
+
+2. Access your server files using SFTP.
+
+3. Upload your custom\_map.zip to /Resources/Client/ so players are able to download the map.
+
+4. After uploading, go to **Startup** in the **FSH Game Panel**.
+
+5. Make sure Default Map is set any default map such as Automation Test Track (Not Disable Start Map)
+
+6. Look for Custom Map Zip File Name and enter the name of the custom\_map.zip you just uploaded.
+
+7. Restart your server to apply the changes.
+
+It should now say in the server console Successfully loaded custom map from ZIP file.
+
+This is how your files should look if everything is uploaded correctly:
+
+```typescript
+Resources
+└── Client
+    ├── custom_map.zip
+    ├── skyline-r33-mod.zip
+    └── ...
+```
+
+> **Note** If you're using a plugin such as BeamJoy to control map changes, you must set Default Map to Disable Start Map in Server Options. Doing so will mean our panel will no longer control the map setting.
+

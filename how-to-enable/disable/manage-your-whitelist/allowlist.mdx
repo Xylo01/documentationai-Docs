@@ -1,0 +1,46 @@
+---
+title: Whitelist/Allowlist?
+---
+On Java versions of the game, the whitelist is called "**whitelist**" and on Bedrock it's called "**allowlist**". The commands are exactly the same, but the command starts differently. /whitelist on - This command is for Java. /allowlist on - This command is for Bedrock.
+
+### Whitelist Commands
+
+There are several commands available to manage the whitelist, either through the console or in-game. Below is a list of the commands:
+
+- **/whitelist on**: Enables the whitelist.
+
+- **/whitelist off**: Disables the whitelist.
+
+- **/whitelist add YourUsername**: Adds the player named "YourUsername" to the whitelist.
+
+- **/whitelist remove YourUsername**: Removes the player named "YourUsername" from the whitelist.
+
+- **/whitelist list**: Displays all whitelisted players.
+
+- **/whitelist reload**: Reloads the player profiles from the `whitelist.json` file.
+
+### How to Enable the Whitelist
+
+1. Go to the **Game Panel** and stop your server.
+
+2. Navigate to the **Properties** tab and find the **Enforce-Whitelist** and **White-List** options. Toggle these on to enable the whitelist.
+
+3. Once done, start your server again. You can now use the `/whitelist add YourUsername` command in the console to add yourself to the whitelist.
+
+### Important Note
+
+If your server has **crossplay enabled** (supporting both Bedrock and Java editions), some players may have spaces in their usernames (typically Bedrock players). In such cases, use the following command to add them to the whitelist:
+
+```typescript
+/whitelist add "Your Username"
+```
+
+Make sure to enclose the username in quotation marks (`""`).
+
+### Managing the Whitelist via the Player Manager
+
+1. Go to the **Game Panel** and stop your server.
+
+2. Navigate to **Console > Player Manager > Whitelist**. From here, you can add or remove players from the whitelist directly.
+
+By following these steps, you can easily manage your server's whitelist and ensure only authorized players can join.

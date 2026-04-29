@@ -84,6 +84,14 @@
                 "group": "Virtual Private Servers",
                 "pages": [
                   {
+                    "title": "Change Window Server Password (Locked Out)",
+                    "path": "change-window-server-password-locked-out"
+                  },
+                  {
+                    "title": "Opening Ports on a VPS",
+                    "path": "opening-ports-on-a-vps"
+                  },
+                  {
                     "title": "Developers and your VPS",
                     "path": "developers-and-your-vps"
                   },
@@ -92,8 +100,209 @@
                     "path": "logging-into-your-vps-windows"
                   },
                   {
+                    "title": "How to connect to your VPS from any Linux/Debian Distro",
+                    "path": "how-to-connect-to-your-vps-from-any-linux/debian-distro"
+                  },
+                  {
+                    "title": "Resetting your VPS Password",
+                    "path": "resetting-your-vps-password"
+                  },
+                  {
+                    "title": "SSH Client Setup",
+                    "path": "ssh-client-setup"
+                  },
+                  {
                     "title": "Creating Your VPS",
                     "path": "creating-your-vps"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "    Game Knowledge Base",
+            "pages": [
+              {
+                "group": "ARK",
+                "pages": [
+                  {
+                    "title": "ARK: SA Game.ini",
+                    "path": "ark-sa-gameini"
+                  },
+                  {
+                    "title": "ARK: SA Command /Server Startline",
+                    "path": "ark-sa-command-/server-startline"
+                  },
+                  {
+                    "title": "ARK: Survival Ascended VPS Set Up",
+                    "path": "ark-survival-ascended-vps-set-up"
+                  },
+                  {
+                    "title": "ARK: SA GameUserSettings.ini",
+                    "path": "ark-sa-gameusersettingsini"
+                  }
+                ]
+              },
+              {
+                "group": "Arma Reforger",
+                "pages": [
+                  {
+                    "title": "Complete config.json guide",
+                    "path": "complete-configjson-guide"
+                  },
+                  {
+                    "title": "Server Requirements",
+                    "path": "server-requirements"
+                  }
+                ]
+              },
+              {
+                "group": "BeamMP",
+                "pages": [
+                  {
+                    "title": "How to Use Console Commands ",
+                    "path": "how-to-use-console-commands"
+                  },
+                  {
+                    "title": "How to Change Your Server Version",
+                    "path": "how-to-change-your-server-version"
+                  },
+                  {
+                    "title": "How to Change Your BeamMP Server Name",
+                    "path": "how-to-change-your-beammp-server-name"
+                  },
+                  {
+                    "title": "How to Change Your BeamMP Server Map",
+                    "path": "how-to-change-your-beammp-server-map"
+                  },
+                  {
+                    "title": "How to Spawn AI Traffic on Your BeamMP Server",
+                    "path": "how-to-spawn-ai-traffic-on-your-beammp-server"
+                  },
+                  {
+                    "title": "How to Create an AuthKey for BeamMP",
+                    "path": "how-to-create-an-authkey-for-beammp"
+                  }
+                ]
+              },
+              {
+                "group": "Minecraft",
+                "pages": [
+                  {
+                    "title": "How to Use GeyserMC",
+                    "path": "how-to-use-geysermc"
+                  },
+                  {
+                    "title": "How to download your Minecraft server world",
+                    "path": "how-to-download-your-minecraft-server-world"
+                  },
+                  {
+                    "title": "How to change MOTD for a Minecraft server",
+                    "path": "how-to-change-motd-for-a-minecraft-server"
+                  },
+                  {
+                    "group": "Common Issues",
+                    "pages": [
+                      {
+                        "title": "Connection timed out: getsockopt",
+                        "path": "connection-timed-out-getsockopt"
+                      },
+                      {
+                        "title": "Authentication servers are down",
+                        "path": "authentication-servers-are-down"
+                      },
+                      {
+                        "title": "Failed to check session lock",
+                        "path": "failed-to-check-session-lock"
+                      },
+                      {
+                        "title": "Exception Server Tick Loop",
+                        "path": "exception-server-tick-loop"
+                      },
+                      {
+                        "title": "Server Connection Timed Out",
+                        "path": "server-connection-timed-out"
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Managing your Server",
+                    "pages": [
+                      {
+                        "title": "How To Enable/Disable/Manage Your Whitelist/Allowlist?",
+                        "path": "how-to-enable/disable/manage-your-whitelist/allowlist"
+                      },
+                      {
+                        "title": "How to Optimize Your Server",
+                        "path": "how-to-optimize-your-server"
+                      },
+                      {
+                        "title": "Using Chunker to Convert Minecraft Worlds Across Editions",
+                        "path": "using-chunker-to-convert-minecraft-worlds-across-editions"
+                      },
+                      {
+                        "title": "Which Java version to use for Minecraft server?",
+                        "path": "which-java-version-to-use-for-minecraft-server"
+                      },
+                      {
+                        "title": "Add Add-ons to your Bedrock Server!",
+                        "path": "add-add-ons-to-your-bedrock-server"
+                      },
+                      {
+                        "title": "Custom Minecraft Server Icon",
+                        "path": "custom-minecraft-server-icon"
+                      },
+                      {
+                        "title": "custom seed ",
+                        "path": "custom-seed"
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Plugins",
+                    "pages": [
+                      {
+                        "title": "Simple Voice Chat",
+                        "path": "simple-voice-chat"
+                      },
+                      {
+                        "title": "Dynmap",
+                        "path": "dynmap"
+                      },
+                      {
+                        "title": "Chunky",
+                        "path": "chunky"
+                      },
+                      {
+                        "title": "Bluemap",
+                        "path": "bluemap"
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Helpful Info!",
+                    "pages": [
+                      {
+                        "title": "How to Install Datapacks to your server?",
+                        "path": "how-to-install-datapacks-to-your-server"
+                      },
+                      {
+                        "title": "What is the difference between Spigot, Paper, and PurPur?",
+                        "path": "what-is-the-difference-between-spigot-paper-and-purpur"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "How much ram do I need ",
+                    "path": "how-much-ram-do-i-need"
+                  },
+                  {
+                    "title": "How to install a custom Minecraft modpack",
+                    "path": "how-to-install-a-custom-minecraft-modpack"
+                  },
+                  {
+                    "title": "How to upload a custom Minecraft world",
+                    "path": "how-to-upload-a-custom-minecraft-world"
                   }
                 ]
               }

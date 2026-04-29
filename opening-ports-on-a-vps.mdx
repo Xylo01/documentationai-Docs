@@ -1,0 +1,51 @@
+### For Windows OS
+
+1. To open ports on Windows, access "Windows Defender Firewall with Advanced Security." You can achieve this by utilizing the Windows search function or navigating to the control panel, both of which are accessible by pressing the Windows Key.
+
+Once you locate the "Windows Defender Firewall with Advanced Security" and reach the main page, proceed to access the "Inbound Rules" section located in the left column. On the right column, choose "New Rule..." as indicated below.
+
+<Image src="https://docs.fourseasonshosting.com/docs/~gitbook/image?url=https%3A%2F%2F117306917-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FNMJyT1j9vuQnp7boSnoR%252Fuploads%252Fu3BZ4hToooTJlmkX7QTH%252FScreenshot%25202024-01-17%2520171713.png%3Falt%3Dmedia%26token%3Dd2cda59f-9d5c-4337-b4d9-60b46869b9df&width=768&dpr=3&quality=100&sign=43c866dd&sv=2" width="1068" height="800" alt="" caption="&#x22;Inbound Rules&#x22; -> &#x22;New Rule...&#x22;" />
+
+1. Navigate to the "New Rule..." page and choose "Port." On the subsequent page, opt for either TCP or UDP based on your requirements. Select "Specific local ports" and input the desired port. On the following page, choose "Allow the connection." Finally, provide a name for the new port. This process applies similarly to "Outbound Rules." As an illustration, for FiveM, select TCP, and input ports as "30120, 40120," as demonstrated below.
+
+
+
+<Image src="https://docs.fourseasonshosting.com/docs/~gitbook/image?url=https%3A%2F%2F117306917-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FNMJyT1j9vuQnp7boSnoR%252Fuploads%252Fy0dNuBSxrVTzpwIJjRx0%252FScreenshot%25202024-01-17%2520173510.png%3Falt%3Dmedia%26token%3D786c5f47-78a9-4dda-af57-cc056a7fdf95&width=768&dpr=3&quality=100&sign=b84e8971&sv=2" width="721" height="590" alt="" caption="FiveM Ports" />
+
+---
+
+### For Ubuntu OS
+
+\- Install UFW: If UFW is not already installed on your system, run the following command to install it:
+
+```typescript
+sudo apt-get install ufw
+```
+
+\- Check the status of UFW: Before making any changes, it's a good idea to check the current status of UFW. Run the following command:
+
+```typescript
+sudo ufw status
+```
+
+\- Allow incoming connections: To allow incoming connections on a specific port, run the following command, replacing "port\_number" with the desired port number (tcp or udp can be added to open that required protocol):
+
+```typescript
+sudo ufw allow port_number/tcp
+```
+
+\- Check UFW rules: To view the rules that UFW is currently following, run the following command:
+
+```typescript
+sudo ufw show added
+```
+
+\- Enable UFW: Once you have added the necessary rules, you can enable UFW by running the following command:
+
+```typescript
+sudo ufw enable
+```
+
+
+
+That's it! You have successfully enabled and opened a port using UFW. Remember to check the UFW status regularly to ensure that it's configured as desired.

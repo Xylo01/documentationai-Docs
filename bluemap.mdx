@@ -1,0 +1,37 @@
+---
+title: Bluemap
+---
+**Setting Up Bluemap**
+
+Before proceeding with the guide, make sure to download the **Bluemap plugin/mod** from <a href="https://modrinth.com/plugin/bluemap/versions" target="_blank" rel="noopener noreferrer">here</a>. Ensure it’s compatible with your server’s version!
+
+1. **Stop Your Server**: Go to the **Game Panel** and stop your server.
+
+2. **Install Bluemap**: Navigate to the **“Files → /plugins”** folder (for plugins) or **“Files → /mods”** folder (for mods), depending on your server type. Drag and drop the downloaded Bluemap file into the appropriate folder. Start your server to generate the necessary files.
+
+3. **Create a New Port Allocation**: Once the files are generated, stop the server again. Go to the **“Network”** tab and click the **“Create Allocation”** button to generate a new port. Save this port number, as you’ll need it for Bluemap’s configuration.
+
+4. **Configure Bluemap**:
+
+   - Locate the Bluemap configuration file. If you installed a **plugin**, it will be in the **“/plugins/Bluemap”** folder. For a **mod**, it will be in the **“/config/Bluemap”** folder.
+
+   - **4.1**: Open the **core.conf** file and change `accept-download: false` to `true` on line 12.
+
+   - **4.2**: Open the **webserver.conf** file and update the `port:` value on line 18 to the port you created in the network tab.
+
+5. **Start Your Server**: Restart your server and allow some time for it to render chunks. Once ready, you can access the live map by visiting: `http://yourserverip:bluemap_port`
+
+Enjoy exploring your world with Bluemap!
+
+
+
+## **Game Panel Proxy Setup**
+
+If you’re running a Minecraft server with Four Seasons Hosting, we’ve streamlined the process for setting up a reverse proxy for Bluemap. With just a few clicks in the Game Panel using the Proxies Manager tool, you can easily configure everything. We handle SSL certificates and all the necessary configurations for you.
+
+1. **Set Up a DNS Record**: Create a DNS record for your custom domain to point to your server’s IP address. If you’re using Cloudflare, ensure the proxy status is set to **DNS only**.
+
+2. **Access Proxies Manager**: Go to the Proxies Manager tool and click the **“Create Proxy”** button.
+
+3. **Configure the Proxy**: In the **Source** field, enter the domain you set up in step 1. In the **Allocation** field, input the allocation you created for Dynmap during the installation process. Then, click **“Create”**.
+

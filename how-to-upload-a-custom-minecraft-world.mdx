@@ -1,0 +1,35 @@
+---
+title: upload a custom Minecraft world
+---
+Before proceeding, kindly ensure that the world you want to upload is compatible with the Minecraft version of your server. We also recommend taking a backup of your current world if you want to save the progress for future use.
+
+---
+
+1. Upload the ZIP file to your server using <a href="https://docs.fourseasonshosting.com/docs/panel-knowledge-base/game-server-panel/uploading-files-via-sftp" target="_blank" rel="noopener noreferrer">SFTP</a>
+
+
+
+1. Access your server from the <a href="https://gamepanel.fourseasonshosting.com/" target="_blank" rel="noopener noreferrer">gamepanel</a> and select the **files** tab.
+
+
+
+1. Unarchive the ZIP file using the panel's function. Make sure that the world folder is located in the root directory, with the content directly inside it.
+
+<Image src="https://docs.fourseasonshosting.com/docs/~gitbook/image?url=https%3A%2F%2F117306917-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FNMJyT1j9vuQnp7boSnoR%252Fuploads%252FN7u5EJeF0JUbxzrZBYtu%252Fimage.png%3Falt%3Dmedia%26token%3Dd015f6cb-d70a-4bb4-8b5e-3d0e447f9fa8&width=768&dpr=3&quality=100&sign=1a5e047b&sv=2" width="1198" height="410" alt="" />
+
+
+
+Now we need to specify the name of the world folder so the server knows which one to use.
+
+1. Select the **Config Editor** tab and open the **Server Properties** section.
+
+
+
+1. Modify the `level-name` property to match the name of the world folder that you previously uploaded. For this example, we have used "house-map", yours will vary.
+
+<Image src="https://docs.fourseasonshosting.com/docs/~gitbook/image?url=https%3A%2F%2F117306917-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FNMJyT1j9vuQnp7boSnoR%252Fuploads%252F06sqqrSdMQ0ZR2yTXoaO%252Fimage.png%3Falt%3Dmedia%26token%3De3ac1d6e-a3cb-4fc3-8719-5902fea94edc&width=768&dpr=3&quality=100&sign=21074f4a&sv=2" width="2524" height="1150" alt="" />
+
+
+
+1. Press **save** at the end of the page, then restart your server.
+

@@ -1,0 +1,64 @@
+---
+title: How to Use GeyserMC
+---
+### What is GeyserMC?
+
+GeyserMC is a proxy server that enables Minecraft: Bedrock Edition players to join and play on Java Edition servers. This allows friends on platforms like PlayStation, Nintendo Switch, iOS, and Android to connect with Java players seamlessly.
+
+**How it Works:** GeyserMC translates data between Bedrock and Java, making cross-platform play possible. *Note:* Your Minecraft server must support Bukkit or Spigot plugins to use GeyserMC.
+
+---
+
+### How to Download GeyserMC
+
+1. <a href="https://geysermc.org/download" target="_blank" rel="noopener noreferrer">Download GeyserMC</a> and obtain the `Geyser-Spigot.jar` file.
+
+2. Open the **File Manager** tab on your Game panel.
+
+3. Navigate to the **Plugins** folder.
+
+4. Upload `Geyser-Spigot.jar` to the Plugins folder.
+
+5. **Restart your server** to activate GeyserMC.
+
+---
+
+### Setting Up GeyserMC
+
+1. **Configure the Bedrock Port:**
+
+   - Go to the **Network** tab in the game panel.
+
+   - Click **Create Allocation** to generate a new port for Bedrock players.
+
+2. Return to the **File Manager** and open the GeyserMC plugin folder.
+
+3. Edit `config.yml`:
+
+   - Locate the `port:` setting and replace `19132` with your newly allocated port.
+
+#### Customize MOTD and Server Name (Optional)
+
+- In `config.yml`, find `motd1` and `motd2` to customize your server's message of the day.
+
+- Edit the `server-name` field to set your server’s name.
+
+---
+
+### Optional: Setup Floodgate for Bedrock Players
+
+Floodgate lets Bedrock players join without a Java account.
+
+1. <a href="https://geysermc.org/download" target="_blank" rel="noopener noreferrer">Download Floodgate</a> and obtain `floodgate-spigot.jar`.
+
+2. Upload `floodgate-spigot.jar` to your Plugins folder.
+
+3. In `config.yml`, find `auth-type` and change it from `online` to `floodgate`.
+
+4. Restart your server.
+
+Bedrock players should now be able to join your Java server!
+
+---
+
+**Tip:** Always restart your server after uploading plugins or updating configuration files for changes to take effect.

@@ -1,0 +1,155 @@
+---
+description: Install and host an ARK SA on a Linux Server (VPS or Dedicated)
+---
+A complete step-by-step guide for a Linux ARK Server
+
+<Callout kind="info" collapsed="false">
+  Need a VPS? Get one with <a href="https://fourseasonshosting.com/client/store/game-vps" target="_blank" rel="noopener noreferrer">Four Seasons Hosting</a>
+</Callout>
+
+<Callout kind="success" collapsed="false">
+  If you find you need help with installing this please open a ticket and our team can do it for you!
+</Callout>
+
+#### Hardware Requirements
+
+- \~12 GB RAM usage per server instance
+
+- \~19 GB disk space (server files only)
+
+### Installation
+
+1. **Login to your VPS via SSH or Console**
+
+Then let's enter this
+
+```typescript
+apt-get install -y docker docker-compose
+```
+
+a bunch of lines will process, once completed you can continue to the next step
+
+1. **Start docker daemon**
+
+```typescript
+systemctl start docker
+systemctl enable docker
+```
+
+1. **Create the Docker Compose Config**
+
+Create a directory called `asa-server` in the main directory
+
+```typescript
+mkdir asa-server
+cd asa-server
+```
+
+now we'll download the file to the `asa-server` folder
+
+```typescript
+wget https://raw.githubusercontent.com/mschnitzer/ark-survival-ascended-linux-container-image/main/docker-compose.yml
+```
+
+1. **The First Server Start** \
+   Now start the server for the first time. It will install Steam, Proton, and downloads the ARK: Survival Ascended server files. In the folder you have the docker-compose.yml file we downloaded, you'll execute the command
+
+```typescript
+docker-compose up -d
+```
+
+This can take some time. Depending on the download speed and processor of your vps!
+
+If you want to follow the download and install, you can watch with this command
+
+```typescript
+docker logs -f asa-server-1
+```
+
+you can CRTL+C to exit the log, and it will not stop the installation
+
+Once the log shows the following line:
+
+```typescript
+Starting the ARK: Survival Ascended dedicated server...
+```
+
+... the server should be reachable and discoverable through the server browser in \~2-5 minutes.
+
+The Server name is randomly generated on the first start, use this command to see the name.
+
+```typescript
+docker exec asa-server-1 cat server-files/ShooterGame/Saved/Config/WindowsServer/GameUserSettings.ini | grep SessionName
+```
+
+<Image src="https://docs.fourseasonshosting.com/docs/~gitbook/image?url=https%3A%2F%2F117306917-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FNMJyT1j9vuQnp7boSnoR%252Fuploads%252Fv3Bjb2JSuDFnSY0HR9oG%252FScreenshot_3.png%3Falt%3Dmedia%26token%3D4154fb1a-bb2d-42f0-8e2e-f1c3689996d9&width=768&dpr=3&quality=100&sign=d01042f9&sv=2" width="1253" height="38" alt="" caption="Result of running above command" />
+
+Once you've connected and ensure the server works, let's stop the server so you can modify it
+
+```typescript
+docker stop asa-server-1
+```
+
+1. **Edit The Server** The `GameUserSettings.ini` and `Game.ini` file can be found at `/var/lib/docker/volumes/asa-server_server-files-1/_data/ShooterGame/Saved/Config/WindowsServer`. The `Game.ini` file is not there by default, so you might want to create it yourself
+
+<Image src="https://docs.fourseasonshosting.com/docs/~gitbook/image?url=https%3A%2F%2F117306917-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FNMJyT1j9vuQnp7boSnoR%252Fuploads%252F198jwwOCmrIXhMghp6gS%252Fimage.png%3Falt%3Dmedia%26token%3Da9fdba59-e211-4ec8-bdb8-919905efdbb0&width=768&dpr=3&quality=100&sign=807d6973&sv=2" width="839" height="50" alt="" caption="the directory with the GameUserSettings.ini" />
+
+To edit the `GameUserSettings.ini` you can do
+
+```typescript
+nano /var/lib/docker/volumes/asa-server_server-files-1/_data/ShooterGame/Saved/Config/WindowsServer/GameUserSettings.ini
+```
+
+Use your arrow keys to scroll the lines of code and backspace to edit once you're happy with your changes do `CTRL + X` then `Y` then `Enter` the editor will close and your changes have been saved.
+
+1. **Changing the startup parameters & Player Limit**
+
+in the `docker-compose.yml` you'll edit the following.&#x20;
+
+```typescript
+...
+    environment:
+      - ASA_START_PARAMS=TheIsland_WP?listen?Port=7777?RCONPort=27020?RCONEnabled=True -WinLiveMaxPlayers=50
+...
+```
+
+Use your arrow keys to scroll the lines of code and backspace to edit once you're happy with your changes do `CTRL + X` then `Y` then `Enter` the editor will close and your changes have been saved.
+
+
+
+<Callout kind="info" collapsed="false">
+  Please note:
+
+  - The value before `?listen` is the name of the map the server launches with. (<a href="https://github.com/mschnitzer/ark-survival-ascended-linux-container-image?tab=readme-ov-file#map-names" target="_blank" rel="noopener noreferrer">See all official map names</a>)
+
+  - Please do not remove `?listen` from the parameters, otherwise the server is not binding ports
+
+  - `?Port=` is the server port players connect to
+
+  - `?RCONPort=` is the port of the RCON server that allows remote administration of the server
+
+  - The player limit is set by `-WinLiveMaxPlayers`. Please note that for ASA servers, editing the player limit via `GameUserSettings.ini` is not working.
+</Callout>
+
+1. **Start/restart/stop** To perform any actions listed below, you will need to be back in the `asa-server` folder (where the `docker-compse.yml` file is)
+
+```typescript
+docker-compose start asa-server-1
+docker-compose restart asa-server-1
+docker-compose stop asa-server-1
+```
+
+1. **Adding Mods&#x20;**&#x4D;ods can be added by adjusting the `docker-compose.yml` file and adding a `-mods` option to the start parameters.
+
+e.g.
+
+```typescript
+[...]
+- ASA_START_PARAMS=TheIsland_WP?listen?Port=7777?RCONPort=27020?RCONEnabled=True -WinLiveMaxPlayers=50 -mods=12345,67891
+[...]
+```
+
+Once done, restart the server using `docker-compose up -d`. It might take longer until the server comes up, because the server has to download the mods first.
+
+Mod IDs are usually somewhere listed on the mod page of a mod on <a href="http://curseforge.com" target="_blank" rel="noopener noreferrer">curseforge.com</a>.
+

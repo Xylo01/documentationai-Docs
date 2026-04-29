@@ -1,0 +1,123 @@
+---
+title: Dynmap
+---
+## Setting Up and Using Dynmap on Your Minecraft Server
+
+Dynmap is a powerful plugin/mod that provides a live, interactive map of your Minecraft server’s worlds, accessible through a web browser. Think of it as Google Maps for Minecraft, helping players explore and interact with their server environment.
+
+While alternatives like BlueMap and squaremap offer optimized solutions, Dynmap remains a favorite for many server admins. This guide will walk you through its installation, configuration, and usage.
+
+---
+
+## **Installation**
+
+If you’re hosting your Minecraft server locally, ensure you have a public IP or port forwarding set up for external access to Dynmap. Follow these steps for installation:
+
+1. **Download Dynmap:** Get the latest version of the Dynmap plugin (for Bukkit/Spigot) from <a href="https://www.spigotmc.org/" target="_blank" rel="noopener noreferrer">SpigotMC</a> or the Dynmap mod (for Forge/Fabric) from <a href="https://www.curseforge.com/" target="_blank" rel="noopener noreferrer">CurseForge</a>.
+
+2. **Add the Plugin/Mod:** Place the downloaded `.jar` file in your server's `plugins` (for Bukkit/Spigot) or `mods` (for Forge/Fabric) directory.
+
+3. **Restart the Server:** Start your server to automatically install and activate Dynmap.
+
+4. **Stop the Server for Configuration:** After the initial setup, stop the server to make changes to Dynmap’s settings.
+
+5. **Set Up Port Allocation:** Create a port for Dynmap through your server hosting control panel.
+
+6. **Edit the Configuration File:** Open the `configuration.txt` file in the `plugins/dynmap` folder. Update the port to match the one allocated in step 5 and define a URL path for the web interface (e.g., `/dynmap`). Save the changes.
+
+7. **Restart the Server:** Launch your server again to complete the setup. Dynmap should now be accessible.
+
+---
+
+---
+
+## **Game Panel Proxy Setup**
+
+If you’re running a Minecraft server with Four Seasons Hosting, we’ve streamlined the process for setting up a reverse proxy for Dynmap. With just a few clicks in the Game Panel using the Proxies Manager tool, you can easily configure everything. We handle SSL certificates and all the necessary configurations for you.
+
+1. **Set Up a DNS Record**: Create a DNS record for your custom domain to point to your server’s IP address. If you’re using Cloudflare, ensure the proxy status is set to **DNS only**.
+
+2. **Access Proxies Manager**: Go to the Proxies Manager tool and click the **“Create Proxy”** button.
+
+3. **Configure the Proxy**: In the **Source** field, enter the domain you set up in step 1. In the **Allocation** field, input the allocation you created for Dynmap during the installation process. Then, click **“Create”**.
+
+That’s it! Your reverse proxy for Dynmap will be ready to go.
+
+## **Manual Setup for Advanced Users**
+
+For those with technical experience, follow these steps to manually configure a reverse proxy on a Debian/Ubuntu server:
+
+1. **Prepare a Proxy Server:** Use a dedicated machine or VPS to host the reverse proxy.
+
+2. **Install a Web Server:** Install Nginx or Apache on your proxy server:
+
+   ```typescript
+   sudo apt update && sudo apt -y install nginx
+   ```
+
+3. **Set Up DNS Records:** Point your domain to the IP of the proxy server.
+
+4. **Configure the Web Server:** Add a configuration block for Nginx:
+
+   ```typescript
+   server {
+       server_name your-domain.com;
+       listen 80;
+       listen [::]:80;
+
+       access_log /var/log/nginx/reverse-access.log;
+       error_log /var/log/nginx/reverse-error.log;
+
+       location / {
+           proxy_pass http://YOUR-DYNMAP-SERVER-IP:PORT;
+       }
+   }
+   ```
+
+   Replace `YOUR-DYNMAP-SERVER-IP:PORT` with the IP and port from your Dynmap setup.
+
+5. **Restart Nginx:**
+
+   ```typescript
+   sudo systemctl restart nginx
+   ```
+
+6. **Test the Proxy:** Visit your custom domain to confirm the setup.
+
+---
+
+## **Using Dynmap**
+
+Access the map via your web browser by entering the server’s IP, followed by the port and URL path (e.g., `http://yourdomain.com:8123/dynmap or http://IP:8123/dynmap`). The Dynmap interface offers:
+
+- A dropdown to switch between maps.
+
+- A player list with real-time locations.
+
+- Search functionality for players and locations.
+
+---
+
+## **Customization**
+
+Dynmap offers extensive customization:
+
+- **Web Interface:** Adjust settings like zoom levels, player visibility, and markers through the “Configure Dynmap” button.
+
+- **Advanced Settings:** Edit `configuration.txt` in the `plugins/dynmap` folder to fine-tune features like map style, update frequency, and more.
+
+---
+
+## **Troubleshooting**
+
+Here are common issues and solutions:
+
+- **Web Interface Not Loading:** Check `server.log` for errors.
+
+- **Incorrect Map Area:** Verify the `worlds.txt` file includes the correct world.
+
+- **Map Not Updating in Real-Time:** Adjust the `updaterate` setting in `configuration.txt`.
+
+---
+
+With Dynmap configured, your Minecraft server will have a fully interactive map that enhances player engagement and navigation. Enjoy exploring!

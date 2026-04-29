@@ -1,0 +1,40 @@
+---
+title: How to Optimize Your Server
+---
+**1. Use PaperSpigot** Switching to PaperSpigot from Vanilla Minecraft is highly recommended due to its focus on performance, stability, and advanced features. Learn more about PaperSpigot here.
+
+**2. Optimize Startup Flags** Startup flags enhance server performance by improving garbage collection, memory usage, and overall optimization. Consider using "Aikar's Flags," a set of JVM flags specifically designed for Paper servers.
+
+Check out this guide on changing server startup parameters (Aikar's Flags) for step-by-step instructions.
+
+**3. Pre-Generate Your World** Minecraft worlds are essentially limitless, so it's a good idea to set up a world border and pre-generate your map. This prevents new chunks from generating, which significantly improves performance.
+
+For detailed instructions, read this guide on pre-generating your world using the Chunky plugin.
+
+**4. Adjust Server Properties** If you’re experiencing lag, consider lowering the `view-distance` and `simulation-distance` settings in your `server.properties` file. Reduce these values by increments of 2 and test the results.
+
+**5. Install Performance Mods** For servers running Fabric or Forge, you can boost performance by installing these mods:
+
+- <a href="https://www.curseforge.com/minecraft/mc-mods/ferritecore-fabric" target="_blank" rel="noopener noreferrer">FerriteCore (Fabric)</a>
+
+- <a href="https://www.curseforge.com/minecraft/mc-mods/ferritecore" target="_blank" rel="noopener noreferrer">FerriteCore (Forge)</a>
+
+- <a href="https://www.curseforge.com/minecraft/mc-mods/lithium" target="_blank" rel="noopener noreferrer">Lithium (Fabric & Forge)</a>
+
+- <a href="https://www.curseforge.com/minecraft/mc-mods/krypton" target="_blank" rel="noopener noreferrer">Krypton (Fabric)</a>
+
+- <a href="https://www.curseforge.com/minecraft/mc-mods/modernfix" target="_blank" rel="noopener noreferrer">ModernFix (Fabric, Forge, NeoForge)</a>
+
+**6. Add Performance Plugins** Enhance server performance further by adding these plugins:
+
+- <a href="https://www.spigotmc.org/resources/clearlagg.68271/" target="_blank" rel="noopener noreferrer">ClearLagg</a>
+
+- <a href="https://www.spigotmc.org/resources/spark.57242/" target="_blank" rel="noopener noreferrer">Spark</a>
+
+- <a href="https://www.spigotmc.org/resources/stackmob-enhance-your-servers-performance.29999/" target="_blank" rel="noopener noreferrer">StackMob</a>
+
+**7. Schedule Daily Restarts** To prevent server overload from extended uptime and memory-intensive tasks, schedule automatic restarts.
+
+Follow this guide on setting up automatic schedules for step-by-step instructions.
+
+For additional optimization tips, refer to this <a href="https://www.spigotmc.org/threads/guide-server-optimization%E2%9A%A1.283181/" target="_blank" rel="noopener noreferrer">SpigotMC server optimization guide</a>.

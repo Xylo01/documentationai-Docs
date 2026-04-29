@@ -1,0 +1,55 @@
+---
+title: install a custom Minecraft modpack
+---
+The first section of this guide will briefly cover the installation of a server software, this essentially allows the mods to run on the server. Examples of popular mod software are Forge, Fabric, Neoforge & Quilt. For the purpose of this demonstration, we will use Forge, however, the process is very identical for the other options.
+
+1. Access your server from the <a href="https://gamepanel.fourseasonshosting.com/" target="_blank" rel="noopener noreferrer">gamepanel</a> and head over to the **Versions** tab.
+
+2. Select your desired server software with the appropriate version, and press install. In order to avoid incompatibility issues, ensure that the server and client use the same version of Forge.
+
+<Image src="https://docs.fourseasonshosting.com/docs/~gitbook/image?url=https%3A%2F%2F117306917-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FNMJyT1j9vuQnp7boSnoR%252Fuploads%252F3HCg9ye7O72CB1WQ9ier%252Fimage.png%3Falt%3Dmedia%26token%3De40a029f-f1ac-476a-a3d1-31ecec38f65a&width=768&dpr=3&quality=100&sign=aea5bccf&sv=2" width="2540" height="1240" alt="" />
+
+---
+
+It is important to understand that some Minecraft mods are only made for **client-side** gameplay and can NOT be used on the server. These generally include mods that change the HUD, graphics, or player controls.
+
+**Once the server installation is complete, do not start your server just yet as we have not added any of the custom files.**
+
+There are two ways of installing mods to your server. The first method is through the Mods tab on the panel, which allows seamless installation from a variety of sources. This method can be used if there are only a small number of mods that you are intending to install. The second and the recommended method is manually uploading the mods to the server using <a href="https://docs.fourseasonshosting.com/docs/panel-knowledge-base/game-server-panel/uploading-files-via-sftp" target="_blank" rel="noopener noreferrer">SFTP</a>, which we will cover next.
+
+1. On your computer, prepare a folder for the server which consists of all the custom files and directories that you are intending to upload to your server. The files you will need for your custom modpack will vary based on your specific requirements. This may include but not be limited to mods, configs, kubejs, resource-packs, worlds etc.
+
+2. Once your server folder is ready, select all of the content and create a zip file as observed below. Your number and selection of files will vary. In the below demonstration, the "server-files" is a ZIP file that consists of all the necessary files and directories.
+
+<Image src="https://docs.fourseasonshosting.com/docs/~gitbook/image?url=https%3A%2F%2F117306917-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FNMJyT1j9vuQnp7boSnoR%252Fuploads%252FscORsEhUvmMgaJgBbI3F%252Fimage.png%3Falt%3Dmedia%26token%3D43161f96-f5fe-44b3-8e0a-d3b51e186fed&width=768&dpr=3&quality=100&sign=c3d5b7b&sv=2" width="245" height="208" alt="" />
+
+1. Upload the ZIP file to your server using <a href="https://docs.fourseasonshosting.com/docs/panel-knowledge-base/game-server-panel/uploading-files-via-sftp" target="_blank" rel="noopener noreferrer">SFTP</a>. This may take a while depending on the size of the file and your internet speed.
+
+2. Unarchive the file from the panel using the built-in feature.
+
+<Image src="https://docs.fourseasonshosting.com/docs/~gitbook/image?url=https%3A%2F%2F117306917-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FNMJyT1j9vuQnp7boSnoR%252Fuploads%252FrXKnzJJK76qnkLiN529f%252Fimage.png%3Falt%3Dmedia%26token%3D6c045a82-9431-4ce7-a5fb-c0ff8aafd39f&width=768&dpr=3&quality=100&sign=e4468f25&sv=2" width="1238" height="575" alt="" />
+
+1. The server files should now be present in the root (main) directory as observed in the image below. Make any other adjustments if necessary.
+
+<Image src="https://docs.fourseasonshosting.com/docs/~gitbook/image?url=https%3A%2F%2F117306917-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FNMJyT1j9vuQnp7boSnoR%252Fuploads%252F8zli0LDktaf1MLYJ8xKY%252Fimage.png%3Falt%3Dmedia%26token%3D6a019561-4081-4f42-b56c-3495acf28b70&width=768&dpr=3&quality=100&sign=2ee5b047&sv=2" width="1263" height="1206" alt="" />
+
+1. Start your server!\
+
+
+---
+
+#### Common Problems
+
+1. Client mods
+
+Using mods that are only intended for client-side on a server will prevent the server from booting up (crash) or throw errors in the console such as `invalid dist DEDICATED_SERVER` . You can fix this by deleting the client mod(s) and restart your server.
+
+1. Incompatible mod or wrong version
+
+Kindly ensure that the version and type of mod matches the server. For example: Using a Fabric only mod for a Forge server will not work. Also, if the server is using Forge 1.20.1, the mod should also be of the same version, using an older or newer version may not work.
+
+1. Missing dependencies
+
+Certain mods will fail to load properly as they require other mods to function, these as referred to as dependency mods. To fix this issue, check the mod information page and upload any required dependencies to your server then restart.
+
+**General advice&#x20;**&#x49;f this is your first time setting up a custom modpack, we suggest starting with a smaller group of mods and working your way up after some testing. While this may slow you down initially, you will improve stability in the long term by being selective.

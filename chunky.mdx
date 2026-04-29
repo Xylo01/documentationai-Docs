@@ -1,0 +1,96 @@
+---
+title: Chunky
+---
+## Chunky Plugin: Pre-Generating Your Minecraft Server World
+
+Chunky is a powerful Bukkit plugin (and mod) designed to pre-generate chunks on your Minecraft server. Pre-generating your server’s world can significantly reduce CPU usage over time, ensuring smoother gameplay, optimized performance, and fewer lag spikes.
+
+This guide explains how to install and use Chunky to prepare your server for peak performance.
+
+---
+
+## **Installation**
+
+**For Bukkit-Based Servers**
+
+1. **Download the Plugin:** Get the latest `.jar` file from <a href="https://www.spigotmc.org/" target="_blank" rel="noopener noreferrer">SpigotMC</a>.
+
+2. **Install the Plugin:** Place the downloaded `.jar` file into your server’s `plugins` folder. You can do this via your file manager or SFTP.
+
+3. **Restart the Server:** Start your server to activate Chunky.
+
+**For Forge or Fabric-Based Servers**
+
+1. **Download the Mod:** Obtain the mod file from <a href="https://www.curseforge.com/" target="_blank" rel="noopener noreferrer">CurseForge</a> or <a href="https://modrinth.com/" target="_blank" rel="noopener noreferrer">Modrinth</a>.
+
+2. **Install the Mod:** Place the downloaded `.jar` file into the `/mods` folder using your file manager or SFTP.
+
+3. **Restart the Server:** Once restarted, Chunky will be ready to use.
+
+---
+
+#### **Usage**
+
+> **Important:** Pre-generating your world can significantly increase its size, so ensure your server has enough disk space. Use tools like <a href="https://onlinemo.de/world" target="_blank" rel="noopener noreferrer">onlinemo.de/world</a> to estimate the size of your world before proceeding. Always back up your server before starting pre-generation.
+
+Chunky offers several commands to control world pre-generation. Here are the key commands you’ll need:
+
+- `/chunky radius <chunk-size>` Defines the radius (in chunks) to be pre-generated, measured from the center. Example: `5000` means 5000 blocks in all directions.
+
+- `/chunky center <x> <z>` Sets the center point for pre-generation. By default, this is `(0, 0)`.
+
+- `/chunky setcorners <x1> <z1> <x2> <z2>` Defines rectangular corners for a custom pre-generation area.
+
+- `/chunky start` Starts the pre-generation process.
+
+- `/chunky pause` Temporarily pauses the process.
+
+- `/chunky resume` Resumes a paused generation process.
+
+- `/chunky stop` Stops the pre-generation process entirely.
+
+- `/chunky status` Displays the progress and status of the current pre-generation.
+
+For additional commands and tips, refer to <a href="https://chunkyplugins.com" target="_blank" rel="noopener noreferrer">Chunky’s documentation</a>.
+
+---
+
+#### **Example: Pre-Generating a 5000x5000 Area**
+
+To pre-generate a 5000x5000 block area centered at `(0, 0)`, follow these steps:
+
+1. Set the radius:
+
+   ```typescript
+   /chunky radius 5000
+   ```
+
+2. Set the center (optional, default is `(0, 0)`):
+
+   ```typescript
+   /chunky center 0 0
+   ```
+
+3. Start the pre-generation process:
+
+   ```typescript
+   /chunky start
+   ```
+
+---
+
+#### **Tips for Efficient Pre-Generation**
+
+- **Be Mindful of the Radius:** Large radii can take hours to complete. Start with a reasonable size based on your server’s needs.
+
+- **Run It During Off-Hours:** Pre-generating chunks consumes server resources and may cause lag. Run it overnight or during downtime for minimal disruption.
+
+- **Check the Status:** Use `/chunky status` to monitor progress.
+
+---
+
+#### **What Happens After Pre-Generation?**
+
+Once Chunky finishes, the specified area (e.g., from X 5000, Z 5000 to X -5000, Z -5000) will be fully generated and ready for players. This ensures smoother gameplay as players explore pre-generated chunks instead of forcing the server to generate them on the fly.
+
+With Chunky, you’ll enhance your server’s performance and provide a seamless experience for your players!

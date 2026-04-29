@@ -1,0 +1,64 @@
+---
+title: Exception Server Tick Loop
+---
+### How to Fix the 'Exception in Server Tick Loop' Error in Minecraft
+
+The "Exception in Server Tick Loop" error in Minecraft is a common issue caused by corrupted `.json` configuration files. This guide will walk you through the steps to resolve the issue and get your server back up and running.
+
+---
+
+## **What Causes This Error?**
+
+This error, typically displayed as:
+
+```typescript
+java.lang.NullPointerException: Exception in server tick loop
+```
+
+indicates that one or more of your server’s `.json` files, such as `whitelist.json`, `banned-players.json`, or `banned-ips.json`, has become corrupted or improperly formatted.
+
+---
+
+## **Steps to Fix the Error**
+
+Follow these steps to resolve the issue:
+
+1. **Stop the Server** Access your game control panel and stop the Minecraft server to prevent further corruption.
+
+2. **Navigate to the File Manager** Locate your server’s file manager through the control panel.
+
+3. **Identify and Delete Problematic Files** Find and delete the following files:
+
+   - `whitelist.json`
+
+   - `banned-players.json`
+
+   - `banned-ips.json`
+
+4. **Restart the Server** Start the server again. Minecraft will automatically regenerate the deleted files in the correct format.
+
+---
+
+## **Alternative Solutions**
+
+### **Restore from Backup**
+
+If you have backups of the affected `.json` files, you can restore them. Ensure the backup files are not corrupted before use.
+
+### **Validate and Correct File Format**
+
+If you prefer not to delete the files, you can validate and fix their formatting using a JSON validator and formatter tool. Ensure:
+
+- The file starts with `[` and ends with `]`.
+
+- The JSON syntax adheres to standard rules.
+
+---
+
+## **Preventing Future Issues**
+
+- Regularly back up your server files to avoid losing important data.
+
+- Use a JSON validator before editing `.json` files manually to ensure they remain correctly formatted.
+
+By following these steps, your server should be free of the "Exception in Server Tick Loop" error and running smoothly again.

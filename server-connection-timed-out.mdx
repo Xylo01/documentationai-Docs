@@ -1,0 +1,53 @@
+---
+title: Server Connection Timed Out
+---
+#### How to Fix the 'Server Connection Timed Out' Error in Minecraft
+
+If you’re encountering the "server connection timed out" error while trying to join a Minecraft server, it can be frustrating. This issue is often caused by high latency, a poor internet connection, misconfigurations, or insufficient server resources. Here’s a guide to help you diagnose and resolve the problem.
+
+---
+
+#### **Common Causes of the Timeout Error**
+
+1. **Insufficient Server Resources** The game server (or a proxy like BungeeCord or Velocity) might not have enough resources to handle the number of players.
+
+2. **Network Issues with the Server Host** The server host may be experiencing outages or network problems. Check their status page for any ongoing incidents.
+
+3. **Misconfigured Proxy** If you're using a proxy (e.g., BungeeCord, Velocity, or Waterfall), incorrect configurations could cause connection issues. Review and verify your proxy settings.
+
+4. **Internet Service Provider (ISP) Issues** Problems with your ISP are a common culprit. A simple restart of your router may help, or you might need to contact your ISP for further assistance.
+
+---
+
+#### **Solutions**
+
+**1. Verify Proxy Configuration**
+
+If your server uses a proxy, ensure its configuration files are set up correctly. Misconfigurations can lead to timeouts.
+
+**2. Restart the Minecraft Server**
+
+A simple server restart can resolve minor issues and free up resources.
+
+**3. Test the Server Connection**
+
+Check if other players are experiencing similar problems. If they aren’t, the issue might be on your end. Use <a href="http://mcsrvstat.us" target="_blank" rel="noopener noreferrer">mcsrvstat.us</a> to verify the status of the Minecraft server.
+
+**4. Use a VPN or Proxy Service**
+
+Sometimes routing issues between your ISP and the server cause timeouts. A VPN or proxy service can help.
+
+- **Recommendation:** Try Cloudflare’s WARP, which optimizes your network routes and can improve connectivity.
+
+**5. Adjust the Server’s Keepalive Timeout (Paper Servers)**
+
+For servers running Paper, you can extend the keepalive timeout to reduce disconnections:
+
+- Add this flag to your server startup arguments:
+
+  ```typescript
+  -Dpaper.playerconnection.keepalive=90
+  ```
+
+  This increases the keepalive timeout to 90 seconds, giving players more time before timing out.
+

@@ -1,0 +1,72 @@
+---
+title: 'ARK: SA Game.ini'
+---
+Game.ini holds some more intermediate level as well as expert level settings. These settings can be specified only in the Game.ini file.
+
+```typescript
+~Game.ini~
+
+[/script/shootergame.shootergamemode] section
+
+BabyCuddleGracePeriodMultiplier  -  default: 1  -  Scales how long after delaying cuddling with the Baby before Imprinting Quality starts to decrease.	
+BabyCuddleIntervalMultiplier  -  default: 1  -  Scales how often babies needs attention for imprinting. More often means you'll need to cuddle with them more frequently to gain Imprinting Quality. Scales always according to default BabyMatureSpeedMultiplier value: set at 1.0 the imprint request is every 8 hours.
+BabyCuddleLoseImprintQualitySpeedMultiplier  -  default: 1  -  Scales how fast Imprinting Quality decreases after the grace period if you haven't yet cuddled with the Baby.
+BabyFoodConsumptionSpeedMultiplier  -  default: 1  -  Scales the speed that baby tames eat their food. A lower value decreases (by percentage) the food eaten by babies.
+BabyImprintAmountMultiplier  -  default: 1  -  Scales the percentage each imprint provides. A higher value, will rise the amount of imprinting % at each baby care/cuddle, a lower value will decrease it. This multiplier is global, meaning it will affect the imprinting progression of every species.
+BabyImprintingStatScaleMultiplier  -  default: 1  -  Scales how much of an effect on stats the Imprinting Quality has. Set it to 0 to effectively disable the system.
+BabyMatureSpeedMultiplier  -  default: 1  -  Scales the maturation speed of babies. A higher number decreases (by percentage) time needed for baby tames to mature.
+bAllowUnlimitedRespecs  -  default: false  -  If True, allows more than one usage of Mindwipe Tonic without 24 hours cooldown.
+bDisableFriendlyFire  -  default: false  -  If True, prevents Friendly-Fire (among tribe mates/tames/structures).
+bDisableStructurePlacementCollision  -  default: false  -  If True, allows for structures to clip into the terrain.
+bPvEDisableFriendlyFire  -  default: false  -  If True, disabled Friendly-Fire (among tribe mates/tames/structures) in PvE servers.
+bUseDinoLevelUpAnimations  -  default: true  -  If False, tame creatures on level-up will not perform the related animation.
+bUseSingleplayerSettings  -  default: false  -  If True, all game settings will be more balanced for an individual player experience. Useful for dedicated server with a very small amount of players.
+ConfigAddNPCSpawnEntriesContainer  -  Adds specific creatures in spawn areas. Recommend use of Beacon to assist with this setting.
+ConfigOverrideItemCraftingCosts  -  Overrides items crafting resource requirements. Recommend use of Beacon to assist with this setting.
+ConfigOverrideItemMaxQuantity  -  Overrides items stack size on a per-item basis. Recommend use of Beacon or a mod to assist with this setting.
+ConfigOverrideNPCSpawnEntriesContainer  -  Overrides specific creatures in spawn areas. Recommend use of Beacon to assist with this setting.
+ConfigOverrideSupplyCrateItems  -  Overrides items contained in loot crates. Recommend use of Beacon to assist with this setting.
+CraftingSkillBonusMultiplier  -  default: 1  -  Scales the bonus received from upgrading the Crafting Skill.
+CraftXPMultiplier  -  default: 1  -  Scales the amount of XP earned for crafting.
+CropDecaySpeedMultiplier  -  default: 1  -  Scales the speed of crop decay in plots. A higher value decrease (by percentage) speed of crop decay in plots.
+CropGrowthSpeedMultiplier  -  default: 1  -  Scales the speed of crop growth in plots. A higher value increases (by percentage) speed of crop growth.
+CustomRecipeEffectivenessMultiplier  -  default: 1  -  Scales the effectiveness of custom recipes. A higher value increases (by percentage) their effectiveness.
+CustomRecipeSkillMultiplier  -  default: 1  -  Scales the effect of the players crafting speed level that is used as a base for the formula in creating a custom recipe. A higher number increases (by percentage) the effect.
+DestroyTamesOverLevelClamp  -  default: 0  -  Tames that exceed that level will be deleted on server start. Official servers have it set to 450. Set to 0, or left at default, will not destroy tames at all due to level.
+EggHatchSpeedMultiplier  -  default: 1  -  Scales the time needed for a fertilised egg to hatch. A higher value decreases (by percentage) that time.
+FuelConsumptionIntervalMultiplier  -  default: 1  -  Defines the interval of fuel consumption.
+GenericXPMultiplier  -  default: 1  -  Scales the amount of XP earned for generic XP (automatic over time).
+GlobalCorpseDecompositionTimeMultiplier  -  default: 1  -  Scales the decomposition time of corpses, (player and creature), globally. Higher values prolong the time.
+GlobalItemDecompositionTimeMultiplier  -  default: 1  -  Scales the decomposition time of dropped items, loot bags etc. globally. Higher values prolong the time.
+GlobalSpoilingTimeMultiplier  -  default: 1  -  Scales the spoiling time of perishables globally. Higher values prolong the time.
+HarvestXPMultiplier  -  default: 1  -  Scales the amount of XP earned for harvesting.
+KillXPMultiplier  -  default: 1  -  Scale the amount of XP earned for a kill.
+LayEggIntervalMultiplier  -  default: 1  -  Scales the time between eggs are spawning / being laid. Higher number increases it (by percentage).
+MatingIntervalMultiplier  -  default: 1  -  Scales the interval between tames can mate. A lower value decreases it (on a percentage scale). Example: a value of 0.5 would allow tames to mate 50% sooner.
+MatingSpeedMultiplier  -  default: 1  -  Scales the speed at which tames mate with each other. A higher value increases it (by percentage). Example: MatingSpeedMultiplier=2.0 would cause tames to complete mating in half the normal time.
+OverrideMaxExperiencePointsDino  -  Overrides the max XP cap of tame characters by exact specified amount. Recommend use of Beacon to assist with this setting.
+OverrideMaxExperiencePointsPlayer  -  Overrides the max XP cap of players characters by exact specified amount. Recommend use of Beacon to assist with this setting.
+OverridePlayerLevelEngramPoints  -  Configures the number of engram points granted to players for each level gained. This option must be repeated for each player level set on the server, e.g.: if there are 65 player levels available this option should appear 65 times, with the first setting the engram points for reaching level 1, the next one setting engram points for level 2 and so on, all the way to the 65th which configures engram points for level 65. Recommend use of Beacon to assist with this setting.
+PassiveTameIntervalMultiplier  -  default: 1  -  Scales how often a survivor get tame requests for passive tame creatures.
+PerLevelStatsMultiplier_Player[<integer>]  -  Scales Player stats. 0 = Health, 1 = Stamina, 2 = Torpidity (useless for this setting), 3 = Oxygen, 4 = Food, 5 = Water, 6 = Temperature (useless for this setting), 7 = Weight, 8 = Melee Damage, 9 = Movement Speed, 10 = Fortitude, 11 = Crafting Speed. These numbers are the same for all stat multiplier settings. Beacon can be used to write this code.
+PerLevelStatsMultiplier_DinoTamed<_type>[<integer>]  -  Scales tamed creature stats. Recommend use of Beacon to assist with this setting.
+PerLevelStatsMultiplier_DinoWild[<integer>]  -  Scales wild creatures stats. Beacon can be used to write this code.
+PlayerBaseStatMultipliers[<attribute>]  -  Changes the base stats of a player by multiplying with the default value. Meaning the start stats of a new spawned character. Numbers labeled as useless above may not be useless here.
+PlayerHarvestingDamageMultiplier  -  default: 1  -  Scales the damage done to a harvestable item/entity by a Player. A higher value increases it (by percentage): the higher number, the faster the survivors collects.
+PoopIntervalMultiplier  -  default: 1  -  Scales how frequently survivors can poop. Higher value decreases it (by percentage)
+ResourceNoReplenishRadiusPlayers  -  default: 1  -  Controls how resources regrow closer or farther away from players. Values higher than 1.0 increase the distance around players where resources are not allowed to grow back. Values between 0 and 1.0 will reduce it.
+ResourceNoReplenishRadiusStructures  -  default: 1  -  Controls how resources regrow closer or farther away from structures Values higher than 1.0 increase the distance around structures where resources are not allowed to grow back. Values between 0 and 1.0 will reduce it.
+SpecialXPMultiplier  -  default: 1  -  Scale the amount of XP earned for SpecialEvent.
+StructureDamageRepairCooldown  -  default: 180  -  Option for cooldown period on structure repair from the last time damaged. Set to 180 seconds by default, 0 to disable it.
+SupplyCrateLootQualityMultiplier  -  default: 1  -  Increases the quality of items that have a quality in the supply crates. Valid values are from 1.0 to 5.0. The quality also depends on the Difficulty Offset.
+TamedDinoCharacterFoodDrainMultiplier  -  default: 1  -  Scales how fast tame creatures consume food.
+TamedDinoTorporDrainMultiplier  -  default: 1  -  Scales how fast tamed creatures lose torpor.
+WildDinoCharacterFoodDrainMultiplier  -  default: 1  -  Scales how fast wild creatures consume food.
+WildDinoTorporDrainMultiplier  -  default: 1  -  Scales how fast wild creatures lose torpor.
+bLimitTurretsInRange  -  default: true  -  If False, doesn't limit the maximum allowed automated turrets (including Plant Species X) in a certain range.
+LimitTurretsNum  -  default: 100  -  Determines the maximum number of turrets that are allowed in the area.
+LimitTurretsRange  -  default: 10000  -  Determines the area in Unreal Unit in which turrets are added towards the limit.
+
+
+```
+

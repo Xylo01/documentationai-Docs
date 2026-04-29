@@ -1,0 +1,61 @@
+---
+description: These options can be specified only on the command/server start line.
+---
+Options starting with a ? (question mark) are appended directly one after another, options starting with a - (hyphen-minus) have to be separated by spaces
+
+```typescript
+-mods=<ModId1>,<ModId2>...  -  Specifies CurseForge Mod Project IDs. Mods are updated automatically when starting the server. Note that mods disabled with the -passivemods option should be placed first in this list.  
+
+-passivemods=<ModId1>,<ModId2>...  -  This option will disable a mod's functionality as well as updates, while still loading its data, serving as a temporary measure until a permanent solution is implemented. The -passivemods command line needs to be used in conjunction with -mods starting with the ones disabled by this command.
+
+?AltSaveDirectoryName=<savedir_name>  -  Allows to specify a custom directory name for server world-save. Note that it still uses the <savedir_name>/<map_name> directory structure.
+
+-AlwaysTickDedicatedSkeletalMeshes  -  Disables optimization to dynamically not tick idle/inactive creature animations on the dedicated server based on server frame rate (only becomes active when server is low FPS). Note: side-effects can include inaccurate collisions for idle creatures on the client versus the server (such as inaccurate jumping position while standing on an inactive/idle Brontosaurus and jumping on its tail as it sits in your base).
+
+-AutoDestroyStructures  -  Enables auto destruction of old structures. Timer can be adjusted with option "AutoDestroyOldStructuresMultiplier" in GameUserSettings.ini under [ServerSettings] section.
+
+-culture=<lang_code>  -  Overrides the server output language. If set in server it doesn't override clients' language. List of currently supported language codes: ca, cs, da, de, en, es, eu, fi, fr, hu, it, ja, ka, ko, nl, pl, pt_BR, ru, sv, th, tr, zh, zh-Hans-CN, zh-TW.
+
+-DisableCustomCosmetics  -  Disables the Custom Cosmetic system
+
+-EasterColors  -  Chance for Easter colors when creatures spawn.
+
+-exclusivejoin  -  Activate a whitelist only mode on the server, allowing players to join if added to the allow list.
+
+-ForceAllowCaveFlyers  -  Force flyer creatures to be allowed into caves
+
+-ForceRespawnDinos  -  Launch with this command to destroy all wild creatures on server start-up.
+
+-GBUsageToForceRestart=<value>  -  Enabled an out of memory protection for servers. In the event that a server reaches an excessive amount of memory, the world will be forced saved and the server will be restarted to prevent crashes or rollbacks. Replace <value> with the wanted amount in gigabytes. Setting it to 0 disables.
+
+-NoBattlEye  -  Disables battleye anti-cheat (not recommended)
+
+-NoWildBabies  -  Disables wild baby spawning
+
+-port=<Server Port>  -  This is the server port used to host the dedicated server on. This is required if you want to run it on a port other than the default 7777.
+
+-servergamelog  -  Enable server admin logs (including support in the RCON). Use RCON command getgamelog to print 100 entries at a time. Also, outputs to dated file in \Logs, adjust max length of the RCON buffer with the option RCONServerGameLogBuffer=600.
+
+-servergamelogincludetribelogs  -  Include tribe logs in the normal server game logs.
+
+-ServerRCONOutputTribeLogs  -  Include tribe logs in the RCON output
+
+-StasisKeepControllers  -  If enabled, the server will keep Unreal Engine actors (e.g.: creatures) AI controller objects in memory when actors go in stasis. This favours performance when a portion of a map is rendered by a player and actors go out of stasis. However, especially on large maps, it will result in higher memory usage even with few or no players.
+
+-UseDynamicConfig  -  Enables the use of the dynamic config, if you don't provide a CustomDynamicConfigUrl the server will use the default dynamic config for that platform (the one used on official server). Note: unless you force an immediate update using the ForceUpdateDynamicConfig command, the configuration is checked every time the world is (auto)saved. When you want to "undo" the config you should be changing it back to whatever your default is, so it can be read from the updated config and thus applied. Omitting any lines will not update those options.
+
+-clusterid=<CLUSTER_NAME>  -  Specifies cluster name ID to allow Cross-ARK Data Transfer. Note: It is recommended you use something of significance to you, followed by a large random number that is not in sequence so others cannot guess your cluster ID and transfer from their own server. IE: USCF918273645
+
+-NoTransferFromFiltering  -  Prevents ARK Data usage between single player and servers who do not have a cluster ID. Even with a cluster id set, it is suggested to keep this option to completely disable code path allowing it.
+
+-CustomNotificationURL=<URL>  -  Allows server custom notification broadcast using the server message feature. Supports HTTP protocols only (HTTPS is not supported). Used in official clusters (e.g.: http://arkdedicated.com/pcnotification.html).
+
+-disableCharacterTracker  -  Used to disable character tracking. Alternatively, this option can be configured with UseCharacterTracker in file GameUserSettings.ini under [ServerSettings] section (note that the argument from command line has priority over the value set in GameUserSettings.ini).
+
+-UnstasisDinoObstructionCheck  -  Should prevent creatures from ghosting through meshes/structures on re-render.
+
+-UseServerNetSpeedCheck  -  It should avoid players to accumulate too much movements data per server tick, discarding the last if those are too many. Can be turned on also with -GUseServerNetSpeedCheck in dynamic config. Enabled on official clusters. May be useful for servers having too many players and stressed on CPU side.
+
+
+```
+
